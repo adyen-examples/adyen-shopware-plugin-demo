@@ -1,0 +1,12 @@
+version: "3"
+services:
+  shopware:
+    image: dockware/dev:latest
+    container_name: shopware
+    ports:
+      - "8080:80"
+    networks:
+      - web
+networks:
+  web:
+    external: false
