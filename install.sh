@@ -6,7 +6,7 @@ if [[ -z ${APP_URL+x} ]] ; then
 fi
 
 # Setup domain
-ocker exec shopware bash -c "bin/console sales-channel:update:domain ${APP_URL}"
+docker exec shopware bash -c "bin/console sales-channel:update:domain ${APP_URL}"
 
 # Install Adyen Plugin 
 docker exec shopware bash -c 'composer require adyen/adyen-shopware6'
