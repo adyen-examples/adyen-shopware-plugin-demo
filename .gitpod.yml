@@ -2,6 +2,9 @@ tasks:
   - command: |
       export APP_URL=`gp url 8080 | sed 's~https://~~'`
       docker-compose up
+      
+  - command: |
+      APP_URL=`gp url 8080 | sed 's~https://~~'` ./install.sh
 ports:
   - port: 8080
     onOpen: open-preview
