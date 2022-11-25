@@ -1,9 +1,9 @@
 tasks:
-  - command: |
+  - init: |
       export APP_URL=`gp url 8080 | sed 's~https://~~'`
       docker-compose up
-      
-  - command: |
+      gp sync-done bundle
+    command:
       APP_URL=`gp url 8080 | sed 's~https://~~'` ./install.sh
 ports:
   - port: 8080
