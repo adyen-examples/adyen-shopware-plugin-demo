@@ -13,7 +13,7 @@ In this demo, you can spin up a Shopware instance and install the Adyen Payment 
 ```
 APP_URL=`gp url 8080 | sed 's~https://~~'` ./install.sh
 ```
-* Visit `https://*.gitpod.io/admin/` and login to view and configure the Adyen Payment plugin
+* Visit `previewURL/admin/` and login to view and configure the Adyen Payment plugin
 * Login with default Shopware Admin credentials: 
     * User: **admin**
     * Password: **shopware**
@@ -54,7 +54,10 @@ APP_URL='localhost:8080' ./install.sh
 ### Usage
 
 1. Visit shop page http://localhost:8080
-2. Login to the admin dashboard (http://localhost:8080/admin/) to configure your [API keys](https://docs.adyen.com/user-management/how-to-get-the-api-key) and payment options. Login with default Shopware Admin credentials.
+2. Login to the admin dashboard (http://localhost:8080/admin/) to configure your [API keys](https://docs.adyen.com/user-management/how-to-get-the-api-key) and payment options.
+3. * Login with default Shopware Admin credentials: 
+    * User: **admin**
+    * Password: **shopware**
 
 Remember to include `http://localhost:8080` in the list of Allowed Origins on the Customer Area.
 
