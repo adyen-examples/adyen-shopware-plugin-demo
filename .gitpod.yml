@@ -1,10 +1,10 @@
 tasks:
-  - init: >
+  - name: Shopware6
+    init: >
       export APP_URL=`gp url 8080 | sed 's~https://~~'`
       docker-compose up
       gp sync-done docker-compose
-    command:
-      APP_URL=`gp url 8080 | sed 's~https://~~'` ./install.sh
+    command: APP_URL=`gp url 8080 | sed 's~https://~~'` ./install.sh
 ports:
   - port: 8080
     onOpen: open-preview
