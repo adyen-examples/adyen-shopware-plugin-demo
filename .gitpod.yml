@@ -1,7 +1,7 @@
 tasks:
   - command: |
       export APP_URL=`gp url 8080 | sed 's~https://~~'`
-      docker image pull dockware/dev:latest
+      docker-compose up dockware/dev:latest
       docker run -d -p 8080:80 --name shopware dockware/dev
       
 ports:
