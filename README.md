@@ -1,4 +1,4 @@
-# Adyen [Shopware 6 Plugin](https://docs.adyen.com/plugins/shopware-6) integration demo
+# Adyen [Shopware 6 Plugin](https://docs.adyen.com/plugins/shopware-6) integration demo for support teams
 
 In this demo, you can spin up a Shopware instance and install the Adyen Payment plugin to see how an integration works. It gives your shoppers the option to pay with their preferred payment method in a seamless checkout experience. You can try this demo both online or locally on your computer.
 
