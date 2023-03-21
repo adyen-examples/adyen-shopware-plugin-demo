@@ -12,6 +12,10 @@ docker exec shopware bash -c "bin/console sales-channel:update:domain ${APP_URL}
 docker exec shopware bash -c 'composer require adyen/adyen-shopware6'
 docker exec shopware bash -c 'php bin/console plugin:refresh'
 docker exec shopware bash -c 'php bin/console plugin:install AdyenPaymentShopware6 --activate'
+docker exec shopware php bin/console system:config:set AdyenPaymentShopware6.config.apiKeyTest "${ADYEN_API_KEY}"
+docker exec shopware php bin/console system:config:set AdyenPaymentShopware6.config.merchantAccount "${ADYEN_MERCHANT_ACCOUNT}"
+docker exec shopware php bin/console system:config:set AdyenPaymentShopware6.config.clientKeyTest "${ADYEN_CLIENT_KEY}"
+docker exec shopware php bin/console adyen:payment-method:enable --all
 docker exec shopware bash -c 'php bin/console cache:clear'
 
 # Upgrade HTTP to HTTPS
