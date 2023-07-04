@@ -10,7 +10,7 @@ docker exec shopware bash -c "bin/console sales-channel:update:domain ${APP_URL}
 docker exec shopware bash -c "sudo mysql -u root -proot shopware -e \"SELECT @RULE_ID := id FROM rule WHERE name = 'All customers'; UPDATE shipping_method SET availability_rule_id = @RULE_ID;\""
 
 # Install Adyen Plugin 
-docker exec shopware bash -c 'composer require adyen/adyen-shopware6'
+docker exec shopware bash -c "composer require adyen/adyen-shopware6:'${SHOPWARE_PLUGIN_VERSION}'"
 docker exec shopware bash -c 'php bin/console plugin:refresh'
 docker exec shopware bash -c 'php bin/console plugin:install AdyenPaymentShopware6 --activate'
 docker exec shopware php bin/console system:config:set AdyenPaymentShopware6.config.apiKeyTest "${ADYEN_API_KEY}"
