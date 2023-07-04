@@ -6,7 +6,7 @@ In this demo, you can spin up a Shopware instance and install the Adyen Payment 
 
 * Open your [Adyen Test Account](https://ca-test.adyen.com/ca/ca/overview/default.shtml) and create a set of [API keys](https://docs.adyen.com/user-management/how-to-get-the-api-key).
 * Go to [gitpod account variables](https://gitpod.io/variables) and set the `ADYEN_API_KEY`, `ADYEN_CLIENT_KEY` and `ADYEN_MERCHANT_ACCOUNT` variables (Scope: `adyen-examples/*`).
-* Set the `SHOPWARE_PLUGIN_VERSION` to the [plugin version](https://github.com/Adyen/adyen-shopware6/tags) you want to install. (Scope: `adyen-examples/*`)
+* Set the `SHOPWARE_PLUGIN_VERSION` to the desired [plugin version](https://github.com/Adyen/adyen-shopware6/tags) for installation, for example, `3.11.0` (Scope: adyen-examples/*).
 * Click the button below and wait for the "Unable to find a matching sales channel for the request" message to appear in the preview panel.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adyen-examples/adyen-shopware-plugin-demo/tree/support)
