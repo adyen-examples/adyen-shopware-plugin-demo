@@ -2,9 +2,7 @@
 
 In this demo, you can spin up a Shopware instance and install the Adyen Payment plugin to see how an integration works. It gives your shoppers the option to pay with their preferred payment method in a seamless checkout experience.
 
-## Running locally
-
-If you don't want to run this demo online, then follow these steps.
+## Setup
 
 ### Requirements
 
